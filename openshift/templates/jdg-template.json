@@ -374,25 +374,30 @@
     {
       "kind": "Service",
       "apiVersion": "v1",
+      "metadata": {
+        "name": "nodejs-jdg",
+        "labels": {
+          "app": "nodejs-jdg"
+        }
+      },
       "spec": {
         "ports": [
           {
+            "name": "8080-tcp",
+            "protocol": "TCP",
             "port": 8080,
             "targetPort": 8080
           }
         ],
         "selector": {
-          "deploymentConfig": "nodejs-jdg"
-        }
-      },
-      "metadata": {
-        "name": "nodejs-jdg",
-        "labels": {
-          "application": "nodejs-jdg"
+          "app": "nodejs-jdg",
+          "deploymentconfig": "nodejs-jdg"
         },
-        "annotations": {
-          "description": "Node.js service endpoint."
-        }
+        "type": "ClusterIP",
+        "sessionAffinity": "None"
+      },
+      "status": {
+        "loadBalancer": {}
       }
     }
   ]
