@@ -24,3 +24,7 @@ $ oc expose service greeter
 
 ----
 
+### Test the service endpoint
+
+http://greeter-helloworld-msa.rhel-cdk.10.1.2.2.xip.io/docs/#/default
+
