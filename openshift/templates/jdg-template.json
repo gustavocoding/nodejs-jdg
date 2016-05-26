@@ -346,6 +346,54 @@
           }
         }
       }
+    },
+    {
+      "kind": "Service",
+      "apiVersion": "v1",
+      "spec": {
+        "ports": [
+          {
+            "port": 11333,
+            "targetPort": 11333
+          }
+        ],
+        "selector": {
+          "deploymentConfig": "datagrid"
+        }
+      },
+      "metadata": {
+        "name": "datagrid-hotrod",
+        "labels": {
+          "application": "datagrid"
+        },
+        "annotations": {
+          "description": "Hot Rod service for clustered applications."
+        }
+      }
+    },
+    {
+      "kind": "Service",
+      "apiVersion": "v1",
+      "spec": {
+        "ports": [
+          {
+            "port": 8080,
+            "targetPort": 8080
+          }
+        ],
+        "selector": {
+          "deploymentConfig": "nodejs-jdg"
+        }
+      },
+      "metadata": {
+        "name": "nodejs-jdg",
+        "labels": {
+          "application": "nodejs-jdg"
+        },
+        "annotations": {
+          "description": "Node.js service endpoint."
+        }
+      }
     }
   ]
 }
