@@ -399,6 +399,26 @@
       "status": {
         "loadBalancer": {}
       }
+    },
+    {
+      "kind": "Route",
+      "apiVersion": "v1",
+      "metadata": {
+        "name": "nodejs-jdg",
+        "labels": {
+          "app": "nodejs-jdg"
+        }
+      },
+      "spec": {
+        "to": {
+          "kind": "Service",
+          "name": "nodejs-jdg"
+        },
+        "port": {
+          "targetPort": 8080
+        }
+      },
+      "status": {}
     }
   ]
 }
