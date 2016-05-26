@@ -20,7 +20,10 @@ $ oc process jdg-nodejs | oc create -f -
 
 ----
 
-### Test the service endpoint
+### Test the service
 
-http://greeter-helloworld-msa.rhel-cdk.10.1.2.2.xip.io/docs/#/default
+http://nodejs-jdg-helloworld-msa.rhel-cdk.10.1.2.2.xip.io/greet?name=Hodor
 
+### Swagger docs
+
+http://nodejs-jdg-helloworld-msa.rhel-cdk.10.1.2.2.xip.io/docs/#/default
