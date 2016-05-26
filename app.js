@@ -16,8 +16,8 @@ SwaggerExpress.create(config, function(err, swaggerExpress) {
 
   swaggerExpress.register(app);
 
-  var port = process.env.PORT || 10010;
-  app.listen(port);
+  var port = process.env.PORT || 8080;
+  app.listen(port, '0.0.0.0');
 
   if (swaggerExpress.runner.swagger.paths['/greet']) {
     console.log('try this:\ncurl http://127.0.0.1:' + port + '/greet?name=Gustavo');
