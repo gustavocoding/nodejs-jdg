@@ -212,7 +212,7 @@
         "strategy": {
           "type": "Rolling",
           "rollingParams": {
-            "timeoutSeconds": 120,
+            "timeoutSeconds": 600,
             "maxSurge": "66%",
             "maxUnavailable": "10%"
           }
