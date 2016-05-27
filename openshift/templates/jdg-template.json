@@ -329,10 +329,6 @@
                     "value": "${ENCRYPTION_REQUIRE_SSL_CLIENT_AUTH}"
                   },
                   {
-                    "name": "HOTROD_SERVICE_NAME",
-                    "value": "datagrid-hotrod"
-                  },
-                  {
                     "name": "REST_SECURITY_DOMAIN",
                     "value": "${REST_SECURITY_DOMAIN}"
                   },
@@ -354,7 +350,7 @@
         "ports": [
           {
             "port": 11333,
-            "targetPort": 11333
+            "targetPort": 11222
           }
         ],
         "selector": {
