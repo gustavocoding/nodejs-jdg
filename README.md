@@ -14,6 +14,7 @@ http://127.0.0.1:8080/docs/
 
 ----
 $ git clone https://github.com/gustavonalle/nodejs-jdg   
+$ oc project default
 $ oc policy add-role-to-user view system:serviceaccount:$(oc project -q):default -n $(oc project -q)   
 $ oc create -f openshift/templates/jdg-template.json  
 $ oc process jdg-nodejs | oc create -f -   
